@@ -1,0 +1,51 @@
+//
+// Vendors -> Plugins
+// ------------------------------------
+
+//svg-icons
+$items:
+  facebook,
+  twitter,
+  percent_icon
+;
+
+.sprite-bg {
+  @include sprite('facebook');
+}
+
+.sprite {
+  display: inline-block;
+  &:before {
+    content: '';
+    display: block;
+  }
+  @each $item in $items {
+    &--#{$item} {
+      &:before {
+        width: map-get(map-get($sizes, $item), 'width');
+        height: map-get(map-get($sizes, $item), 'height');
+        background: url(map-get($sprites, $item)) center no-repeat;
+      }
+    }
+  }
+}
+//svg-icons
+
+//select
+.select2-container--default .select2-selection--single {
+  @extend .control;
+  .select2-selection__arrow {
+    height: 100%;
+  }
+  .select2-selection__rendered {
+    padding: 0;
+  }
+}
+.select2-container {
+  width: auto !important;
+  display: block;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background: $base-color-main;
+}
+//select

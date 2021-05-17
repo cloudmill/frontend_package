@@ -1,0 +1,13 @@
+ul.pagination
+    li.pagination__item
+        a.pagination__link(href='#')
+            i &larr;
+            |  Prev
+    li.pagination__item.active
+        a.pagination__link(href='#') 1
+    - for (var x = 2; x < 8; x++)
+        li.pagination__item
+            a.pagination__link(href='#')= x
+    li.pagination__item
+        a.pagination__link(href='#') Next
+            i  &rarr;
