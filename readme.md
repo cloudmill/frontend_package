@@ -9,7 +9,7 @@ Prerequisites:
 
 Минимальная версия Node:
 ```
-node v10+
+node v14+
 npm v6+
 ```
 
