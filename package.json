@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && webpack --config webpack/webpack.config.js --env NODE_ENV=production --mode=production --progress",
-    "dev": "webpack server --config webpack/webpack.config.js --env NODE_ENV=development --mode development --progress --open"
+    "dev": "webpack server --config webpack/webpack.config.js --env NODE_ENV=development --mode development --progress --open",
+    "script": "rimraf dist && webpack --config webpack/webpack.config.script.js --mode=none"
   },
   "devDependencies": {
     "@babel/core": "7.14.2",
@@ -40,7 +41,7 @@
     "html-webpack-plugin": "^5.1.0",
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-gifsicle": "^7.0.0",
-    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
     "mini-css-extract-plugin": "^1.6.0",
